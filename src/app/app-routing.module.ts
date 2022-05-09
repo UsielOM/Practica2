@@ -11,6 +11,9 @@ loadChildren: () => import('./pages/home/home.module').then(m=>m.HomeModule)
 {path:'nomina',
 loadChildren: () => import('./pages/nomina/nomina.module').then(m=>m.NominaModule)
 },
+{path: 'galeria',
+loadChildren: () => import('./pages/producto/producto.module').then(m => m.ProductoModule)
+},
 
 
 {path: '**', redirectTo:'home'}

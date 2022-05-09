@@ -6,23 +6,25 @@ import { HomeModule } from './pages/home/home.module';
 import { NominaModule } from './pages/nomina/nomina.module';
 import { PdfmakeModule } from './shared/pdfmake/pdfmake.module';
 import { PdfMakeWrapper } from 'pdfmake-wrapper';
-import * as pdfFonts from "pdfmake/build/vfs_fonts"; // fonts provided for pdfmake
-
+import * as pdfFonts from "pdfmake/build/vfs_fonts";
 // If any issue using previous fonts import. you can try this:
 // import pdfFonts from "pdfmake/build/vfs_fonts";
+import { ProductoModule } from './pages/producto/producto.module';
 
 // Set the fonts to use
 PdfMakeWrapper.setFonts(pdfFonts);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+  
   ],
   imports: [
     BrowserModule,
     HomeModule,
     NominaModule,
     PdfmakeModule,
+    ProductoModule,
     AppRoutingModule
   ],
   providers: [],
