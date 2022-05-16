@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ValidadoresService } from '../../service/validadores.service';
 
 @Component({
   selector: 'app-registrar',
@@ -9,7 +10,7 @@ import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } 
 export class RegistrarComponent implements OnInit {
   
  form: any
-  constructor(private fb:FormBuilder) {
+  constructor(private fb:FormBuilder, private _validadores:ValidadoresService) {
   this.formulario();  
    }
 
@@ -32,8 +33,12 @@ export class RegistrarComponent implements OnInit {
     return this.form.get('password').invalid && this.form.get('password').touched
   }
   get confirmacionInvalid(){
-    return this.form.get('confirmacion').invalid && this.form.get('confirmacion').touched
+    const pass1 = this.form.get('password').value;
+    const pass2 = this.form.get('confirmacion').value;
+
+    return (pass1 === pass2) ? false : true
   }
+
   formulario(){
     this.form= this.fb.group({
       firstName: ['', Validators.required],
@@ -42,7 +47,9 @@ export class RegistrarComponent implements OnInit {
       phone: ['', Validators.required],
       password: ['', Validators.required],
       confirmacion: ['', Validators.required],
-    })
+    },{
+      validators: this._validadores.passwordsonIguales('password', 'confirmacion')
+    });
   }
   guardar(){
     console.log(this.form);
