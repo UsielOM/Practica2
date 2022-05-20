@@ -17,9 +17,7 @@
                     <div class="col-sm-6">
                         <label for="firstName" class="form-label">First name</label>
                         <input type="text" class="form-control" id="firstName" name="firstName" formControlName="firstName" [class.is-invalid]="form.get('firstName').invalid && form.get('firstName').touched">
-                        <div class="invalid-feedback">
-                            Valid first name is required.
-                        </div>
+
                     </div>
                     <div class="col-sm-6">
                         <label for="lastName" class="form-label">Last name</label>

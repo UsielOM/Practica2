@@ -1,1 +1,50 @@
-<p>form works!</p>
+<div class="container">
+    <form [formGroup]="form2" autocomplete="off" (ngSubmit)="save()">
+        <div class="mb-3">
+            <label for="Nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name2" name="name2" formControlName="name2" [class.is-invalid]="form2.get('name2').invalid && form2.get('name2').touched">
+            <div class="invalid-feedback">
+                Se requiere de su nombre
+            </div>
+
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" formControlName="email2" [class.is-invalid]="emailInvalid()">
+
+            <div class="invalid-feedback">
+                Se requiere de su email
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password2" name="password2" formControlName="password2" [class.is-invalid]="passwordInvalid()">
+            <div class="invalid-feedback">
+                Se requiere de un password
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="validar" class="form-label">Confirma tu password</label>
+            <input type="password" class="form-control" id="validar" name="validar" formControlName="validar" [class.is-invalid]="confrimacionInvalid">
+            <div class="invalid-feedback">
+                Tu password no es el mismo
+            </div>
+        </div>
+
+
+        <button class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+
+<pre>
+    Estado del formulario {{ form2.valid}}
+    <br>
+    Status: {{form2.status}}
+    </pre>
+
+<pre>
+        {{ form2.value | json}}
+    </pre>

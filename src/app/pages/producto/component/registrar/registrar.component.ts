@@ -63,6 +63,7 @@ export class RegistrarComponent implements OnInit {
       validators: this._validadores.passwordsonIguales('password', 'confirmacion')
     });
   }
+  
   guardar(){
     console.log(this.form);
     if(this.form.invalid)
