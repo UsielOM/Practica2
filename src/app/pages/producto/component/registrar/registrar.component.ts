@@ -32,6 +32,14 @@ export class RegistrarComponent implements OnInit {
   get passwordInvalid(){
     return this.form.get('password').invalid && this.form.get('password').touched
   }
+
+  get distritoInvalid(){
+    return this.form.get('direccion.distrito').invalid && this.form.get('direccion.distrito').touched
+  }
+  get ciudadInvalid(){
+    return this.form.get('direccion.ciudad').invalid && this.form.get('direccion.ciudad').touched
+  }
+  
   get confirmacionInvalid(){
     const pass1 = this.form.get('password').value;
     const pass2 = this.form.get('confirmacion').value;
@@ -47,10 +55,15 @@ export class RegistrarComponent implements OnInit {
       phone: ['', Validators.required],
       password: ['', Validators.required],
       confirmacion: ['', Validators.required],
+      direccion: this.fb.group({
+        distrito: ['', Validators.required],
+        ciudad: ['', Validators.required],
+      })
     },{
       validators: this._validadores.passwordsonIguales('password', 'confirmacion')
     });
   }
+  
   guardar(){
     console.log(this.form);
     if(this.form.invalid)

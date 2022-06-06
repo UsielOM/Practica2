@@ -2,7 +2,7 @@
 
     <div class="row align-item-stretch">
 
-        <div class="col-7 bg-white p-5 rounded-end">
+        <div class="col-12 bg-white p-5 rounded-end">
 
             <div class="text-start">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkPyBnFAca4aMoxAedjxqw6bl6rffu1RAQCjynjVJxaDl7a5FySWQksoC2vnefcgHsvEo&usqp=CAU" width="48" alt="">
@@ -17,9 +17,7 @@
                     <div class="col-sm-6">
                         <label for="firstName" class="form-label">First name</label>
                         <input type="text" class="form-control" id="firstName" name="firstName" formControlName="firstName" [class.is-invalid]="form.get('firstName').invalid && form.get('firstName').touched">
-                        <div class="invalid-feedback">
-                            Valid first name is required.
-                        </div>
+
                     </div>
                     <div class="col-sm-6">
                         <label for="lastName" class="form-label">Last name</label>
@@ -63,6 +61,23 @@
 
                     </div>
 
+                    <div class="form-group row" formGroupName="direccion">
+                        <div class="col-2 pt-4"> Direccion</div>
+                        <div class="col-5">
+                            <br>
+                            <input type="text" class="form-control" id="distrito" name="distrito" formControlName="distrito" [class.is-invalid]="distritoInvalid">
+
+                        </div>
+
+                        <div class="col-5">
+                            <br>
+                            <input type="text" class="form-control" id="ciudad" name="ciudad" formControlName="ciudad" [class.is-invalid]="ciudadInvalid">
+
+                        </div>
+
+                    </div>
+
+
                 </div>
 
                 <div class="mb-4">
@@ -86,17 +101,7 @@
 
 
         </div>
-        <div class="col-5  d-none d-lg-block  col-md-5 col-lg-5 col-xl-5 rounded ">
-            <div class="row  align-items-center   fila1">
 
-                <div class="col-3 columna">
-
-                    <img src="assets/sintomas.png" class="img-WH" alt="">
-                </div>
-
-            </div>
-
-        </div>
 
     </div>
 

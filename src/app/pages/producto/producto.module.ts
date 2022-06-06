@@ -10,6 +10,7 @@ import { GaleriaService } from './service/galeria.service';
 import { RegistrarComponent } from './component/registrar/registrar.component';
 import { NavbarGaleriaComponent } from './component/navbar-galeria/navbar-galeria.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormComponent } from './component/form/form.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     Producto2Component,
     ProductopagesComponent,
     RegistrarComponent,
-    NavbarGaleriaComponent
+    NavbarGaleriaComponent,
+    FormComponent
   ],
   imports: [
     CommonModule,
