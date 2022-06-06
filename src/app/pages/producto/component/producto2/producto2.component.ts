@@ -6,6 +6,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './producto2.component.html',
   styleUrls: ['./producto2.component.css']
 })
+
 export class Producto2Component implements OnInit {
   producto: any ={};
 
