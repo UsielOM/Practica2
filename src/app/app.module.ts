@@ -30,7 +30,6 @@ PdfMakeWrapper.setFonts(pdfFonts);
     ProductoModule,
    FormsModule,
    ReactiveFormsModule,
-   
     AppRoutingModule,
     HttpClientModule
   ],

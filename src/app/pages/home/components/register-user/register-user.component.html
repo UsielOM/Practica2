@@ -1,0 +1,98 @@
+<div class="container w-50 bg-white mb-3 mt-3 rounded shadow ">
+
+    <div class="row align-item-stretch">
+
+        <div class="col-12 bg-white p-5 rounded-end">
+
+            <div class="text-start">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkPyBnFAca4aMoxAedjxqw6bl6rffu1RAQCjynjVJxaDl7a5FySWQksoC2vnefcgHsvEo&usqp=CAU" width="48" alt="">
+            </div>
+
+            <h2 class="fw-bold text-start py-5">
+                Registrate
+            </h2>
+            <!-- Registro -->
+            <form>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <label for="firstName" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" formControlName="firstName">
+
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="lastName" class="form-label">Last name</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" formControlName="lastName">
+
+                    </div>
+                    <div class="col-12">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="@example" formControlName="email">
+
+                    </div>
+
+                    <div class="col-12">
+                        <label for="tel" class="form-label">Phone</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" formControlName="phone">
+                        <div class="invalid-feedback">
+                            Valid last name is required.
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="col-6">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" formControlName="password">
+
+                    </div>
+
+                    <div class="col-6">
+                        <label for="password" class="form-label">Confirmacion</label>
+                        <input type="password" class="form-control" id="confirmacion" name="confirmacion" formControlName="confirmacion">
+
+                    </div>
+
+                    <div class="form-group row" formGroupName="direccion">
+                        <div class="col-2 pt-4"> Direccion</div>
+                        <div class="col-5">
+                            <br>
+                            <input type="text" class="form-control" id="distrito" name="distrito" formControlName="distrito">
+
+                        </div>
+
+                        <div class="col-5">
+                            <br>
+                            <input type="text" class="form-control" id="ciudad" name="ciudad" formControlName="ciudad">
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="mb-4">
+
+                    <label for="connected" class="form-check-label">Usa 8 o más caracteres con una combinación de letras, números y símbolos</label>
+                </div>
+
+                <div class="d-grid">
+                    <button class="btn btn-primary">crear</button>
+
+                </div>
+                <div class="my-3">
+                    <span>Ya tienes una cuenta ? <a href="/home"> Logeate</a> </span><br>
+
+                </div>
+
+            </form>
+
+            <!-- IMAGEN -->
+
+
+
+        </div>
+
+
+    </div>
