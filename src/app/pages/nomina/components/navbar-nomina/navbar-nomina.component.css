@@ -11,6 +11,11 @@
     margin-top: -4px
 }
 
+.centrar {
+    /* margin-top: 10px; */
+    top: 8px;
+}
+
 .gg-search::after {
     content: "";
     display: block;
