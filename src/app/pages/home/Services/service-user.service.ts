@@ -3,8 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Roll } from '../Interfaces/roll';
 import { environment } from 'src/environments/environment';
-import { Registro } from '../Interfaces/Registro';
+
 import { Asignacion } from '../Interfaces/asignacion';
+import { Reg } from '../Interfaces/regis';
 
 @Injectable({
   providedIn: 'root'
@@ -21,8 +22,8 @@ export class ServiceUserService {
     return this.http.get<any>(environment.apiUrl + "/Maximo");
   }
 
-  postRegistro(regis:Registro): Observable<Registro>{
-    return this.http.post<Registro>(environment.apiUrl + "/post/registro/",regis);
+  postRegistro(regis:Reg): Observable<Reg>{
+    return this.http.post<Reg>(environment.apiUrl + "/post/registro/",regis);
   }
 
   postAsignacion(asig:Asignacion): Observable<Asignacion>{

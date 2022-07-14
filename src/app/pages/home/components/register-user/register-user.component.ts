@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ServiceUserService } from '../../Services/service-user.service';
 import { HttpClient } from '@angular/common/http';
 import { Roll } from '../../Interfaces/roll';
-import { Registro } from '../../Interfaces/Registro';
+
 import { Asignacion } from '../../Interfaces/asignacion';
+import { Reg } from '../../Interfaces/regis';
 
 @Component({
   selector: 'app-register-user',
@@ -11,7 +12,9 @@ import { Asignacion } from '../../Interfaces/asignacion';
   styleUrls: ['./register-user.component.css']
 })
 export class RegisterUserComponent implements OnInit {
-reg: Registro= new Registro();
+// reg: Registro= new Registro();
+
+reg: Reg = new Reg();
 
 asig:Asignacion = new Asignacion();
 

@@ -1,11 +1,8 @@
-export  class Registro {
-    
+export class Reg{
     FirstName="";
     LastName="";
     Phone="";
     Email="";
-    Password=""
+    Password="";
     
-
-
 }
