@@ -22,14 +22,25 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </li>
+
+
                     </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="pdfn">pdf</a>
                 </li>
+                <li class="nav-item pt-3 ps-3">
+                    <button class="btn gg-search" (click)="aparecer()"></button>
+                </li>
+                <li class="nav-item ps-5 pt-3">
+                    <button class="btn gg-search" (click)="aparecer()"></button>
+                </li>
+
             </ul>
-            <button class="btn btn-danger" (click)="aparecer()">APARECER</button>
+
             <form class="d-flex" *ngIf="band ">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>

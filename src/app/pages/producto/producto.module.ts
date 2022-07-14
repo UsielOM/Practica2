@@ -11,6 +11,7 @@ import { RegistrarComponent } from './component/registrar/registrar.component';
 import { NavbarGaleriaComponent } from './component/navbar-galeria/navbar-galeria.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormComponent } from './component/form/form.component';
+import{HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { FormComponent } from './component/form/form.component';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    ProductoRoutingModule
+    ProductoRoutingModule,
+    HttpClientModule
   ],
   providers:[
   GaleriaService

@@ -2,7 +2,7 @@
     <form [formGroup]="form2" autocomplete="off" (ngSubmit)="save()">
         <div class="mb-3">
             <label for="Nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="name2" name="name2" formControlName="name2" [class.is-invalid]="form2.get('name2').invalid && form2.get('name2').touched">
+            <input type="text" class="form-control" id="name2" name="name2" formControlName="name2" [class.is-invalid]="form2.get('name2').invalid && form2.get('name2').touched" [(ngModel)]="prueb.user_name">
             <div class="invalid-feedback">
                 Se requiere de su nombre
             </div>
@@ -10,7 +10,7 @@
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email" name="email" formControlName="email2" [class.is-invalid]="emailInvalid()">
+            <input type="email" class="form-control" id="email" name="email" formControlName="email2" [class.is-invalid]="emailInvalid()" [(ngModel)]="prueb.user_email">
 
             <div class="invalid-feedback">
                 Se requiere de su email
@@ -18,7 +18,7 @@
         </div>
         <div class="mb-3">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password2" name="password2" formControlName="password2" [class.is-invalid]="passwordInvalid()">
+            <input type="password" class="form-control" id="password2" name="password2" formControlName="password2" [class.is-invalid]="passwordInvalid()" [(ngModel)]="prueb.user_password">
             <div class="invalid-feedback">
                 Se requiere de un password
             </div>
@@ -35,6 +35,7 @@
 
         <button class="btn btn-primary">Submit</button>
     </form>
+
 </div>
 
 
