@@ -8,6 +8,8 @@ import { CardsComponent } from './components/cards/cards.component';
 
 import { RegisterUserComponent } from './components/register-user/register-user.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { VerUsuariosComponent } from './components/ver-usuarios/ver-usuarios.component';
 
 
 @NgModule({
@@ -15,10 +17,13 @@ import { HttpClientModule } from '@angular/common/http';
     HomePagesComponent,
     NavbarHomeComponent,
     CardsComponent,
-    RegisterUserComponent
+    RegisterUserComponent,
+    VerUsuariosComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     HomeRoutingModule,
     HttpClientModule
   ]
