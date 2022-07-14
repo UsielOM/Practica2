@@ -4,6 +4,7 @@ import { PdfmakeComponent } from 'src/app/shared/pdfmake/pdfmake.component';
 import { NominaPagesComponent } from '../nomina/nomina-pages.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { RegisterUserComponent } from './components/register-user/register-user.component';
+import { VerUsuariosComponent } from './components/ver-usuarios/ver-usuarios.component';
 import { HomePagesComponent } from './home-pages.component';
 
 
@@ -12,7 +13,8 @@ const routes: Routes = [
 children:[
   {path:'cards', component:CardsComponent},
   {path: 'pdf', component:PdfmakeComponent},
-  {path: 'registeruser', component:RegisterUserComponent}
+  {path: 'registeruser', component:RegisterUserComponent},
+  {path:'verusuarios', component:VerUsuariosComponent}
 
 
 ]

@@ -1,1 +1,24 @@
-<p>ver-usuarios works!</p>
+<div class="container">
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Roll</th>
+
+                </tr>
+            </thead>
+            <tbody *ngFor="let user of user">
+                <tr>
+                    <th scope="row">{{user.id_Asignacion}}</th>
+
+                    <td>{{user.user.FirstName}}</td>
+                    <td>{{user.roll.roll_name}}</td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

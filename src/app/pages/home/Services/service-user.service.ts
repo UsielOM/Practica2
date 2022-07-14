@@ -6,6 +6,7 @@ import { environment } from 'src/environments/environment';
 
 import { Asignacion } from '../Interfaces/asignacion';
 import { Reg } from '../Interfaces/regis';
+import { Join } from '../Interfaces/join';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +23,10 @@ export class ServiceUserService {
     return this.http.get<any>(environment.apiUrl + "/Maximo");
   }
 
+getUser():Observable<Join[]>{
+  return this.http.get<Join[]>(environment.apiUrl + "/join");
+}
+
   postRegistro(regis:Reg): Observable<Reg>{
     return this.http.post<Reg>(environment.apiUrl + "/post/registro/",regis);
   }
@@ -29,6 +34,7 @@ export class ServiceUserService {
   postAsignacion(asig:Asignacion): Observable<Asignacion>{
     return this.http.post<Asignacion>(environment.apiUrl + "/post/asignacion/",asig);
   }
+
 
 
 
